@@ -15,7 +15,7 @@ df1['Symbol'] = stocks['Symbol']
 df1['momentum'] = 0  # Initialize momentum with a default value (e.g., 0)
 
 # Calculate momentum as (price on '2023-06-01' - price on '2023-01-04') / price on '2023-06-01'
-df1['momentum'] = (stocks['2023-06-01'] - stocks['2023-01-04']) / stocks['2023-06-01']
+df1['momentum'] = (stocks['2023-06-01'] - stocks['2023-01-04']) / stocks['2023-01-04']
 
 df1.to_csv('2023_period1.csv', index=False)
 
@@ -24,7 +24,7 @@ df1.to_csv('2023_period1.csv', index=False)
 df2 = pd.DataFrame()
 df2['Symbol'] = stocks['Symbol']
 df2['momentum'] = 0  # Initialize momentum with a default value (e.g., 0)
-df2['momentum'] = (stocks['2023-12-29'] - stocks['2023-06-02']) /stocks['2023-12-29']
+df2['momentum'] = (stocks['2023-12-29'] - stocks['2023-06-02']) / stocks['2023-06-02']
 
 df2.to_csv('2023_period2.csv', index=False)
 
